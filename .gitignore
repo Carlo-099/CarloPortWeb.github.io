@@ -1,0 +1,7 @@
+# Ignore original video files
+videos/*.mp4
+!videos/compressed_*.mp4
+
+# Ignore system files
+.DS_Store
+Thumbs.db 
