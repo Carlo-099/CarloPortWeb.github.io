@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#banner {
+				transition: background-image 0.8s cubic-bezier(0.4,0,0.2,1), opacity 0.8s cubic-bezier(0.4,0,0.2,1);
+				position: relative;
+			}
+			#banner.fade {
+				opacity: 0.3;
+			}
+
+			/* Add dark overlay to banner */
+			#banner::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.8); /* Darker overlay */
+				box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.95); /* Stronger inner shadow */
+				z-index: 1;
+			}
+
+			/* Ensure content stays above the overlay */
+			#banner .inner {
+				position: relative;
+				z-index: 2;
+			}
+
+			/* Modal styles */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.9);
+				overflow: auto;
+			}
+
+			.modal-content {
+				margin: auto;
+				display: block;
+				max-width: 90%;
+				max-height: 90vh;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.close-modal {
+				position: absolute;
+				right: 25px;
+				top: 15px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				cursor: pointer;
+				z-index: 1001;
+			}
+
+			.certificate-image {
+				cursor: pointer;
+				transition: opacity 0.3s;
+			}
+
+			.certificate-image:hover {
+				opacity: 0.8;
+			}
+
+			/* Add spacing between certificate articles */
+			#four .features article {
+				margin-bottom: 3em;
+			}
+
+			#four .features article:last-child {
+				margin-bottom: 0;
+			}
+
+			/* Add horizontal and vertical gap between certificate articles */
+			#four .features {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2em;
+				justify-content: center;
+			}
+			#four .features article {
+				flex: 1 1 350px;
+				max-width: 400px;
+				min-width: 320px;
+				box-sizing: border-box;
+			}
+			#four .features article img {
+				border-radius: 12px;
+			}
+
+			.custom-icon {
+				width: 32px;
+				height: 32px;
+				margin: 0 4px;
+				vertical-align: middle;
+			}
+
+			.logo {
+				background: rgba(255, 255, 255, 0.23);
+				padding: 1em;
+				border-radius: 8px;
+				display: inline-block;
+				margin-top: 1em;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Karlo_Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="project_ved.html">Videos</a></li>
+								<li><a href="project_web.html">Projects</a></li>
+								<li><a href="project_3d.html">3D Animation</a></li>
+								
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" style="background: url('images/bg.jpg') center center/cover no-repeat;">
+						<div class="inner" style="display: flex; align-items: center; justify-content: space-between;">
+							<div style="flex: 1;">
+							
+								<h2>CARLO ALGORDO</h2>
+								<p>Resourceful and Creative<a href="http://html5up.net">.....</a></p>
+
+								<div class="logo">
+									<img src="icons/icon1.png" alt="icon1" class="custom-icon" />
+									<img src="icons/icon2.png" alt="icon2" class="custom-icon" />
+									<img src="icons/icon3.png" alt="icon3" class="custom-icon" />
+									<img src="icons/icon4.png" alt="icon4" class="custom-icon" />
+									<img src="icons/icon5.png" alt="icon5" class="custom-icon" />
+									<img src="icons/icon6.png" alt="icon6" class="custom-icon" />
+									<img src="icons/icon7.png" alt="icon7" class="custom-icon" />
+									<img src="icons/icon8.png" alt="icon8" class="custom-icon" />
+									<img src="icons/icon9.png" alt="icon9" class="custom-icon" />
+									<img src="icons/icon10.png" alt="icon10" class="custom-icon" />
+									<img src="icons/icon11.png" alt="icon11" class="custom-icon" />
+									<img src="icons/icon12.png" alt="icon12" class="custom-icon" />
+								</div>
+							</div>
+							
+							<div style="flex: 1; margin-left: 4em;">
+								<div style="background: rgba(0, 0, 0, 0.2); padding: 1em; border-radius: 4px; width: 100%; margin: 0 auto;">
+									<img src="images/me.jpeg" style="object-fit: contain; border-radius: 10px; max-width: 250px; display: block; margin: 0 auto;">
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+				<!-- One -->
+				<section id="one" class="wrapper spotlight style1">
+					<div style="display: flex; flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+						
+						<!-- Video on the left -->
+						<div class="video-container" style="border-radius: 2px; display: flex; justify-content: center; flex: 1; min-width: 300px;">
+							<video width="100%" height="auto" loop muted autoplay style="object-fit: cover; border-radius: 15px; max-width: 550px;">
+								<source src="videos/Web.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+
+						<!-- Text on the right -->
+						<div class="content" style="flex: 1; min-width: 300px;">
+							<h2 class="major">HTML, CSS, JavaScript, Database</h2>
+							<p>I have hands-on experience in web development, where I design and build user-friendly websites using HTML, CSS, JavaScript, and PHP frameworks like CodeIgniter and Laravel. I enjoy turning ideas into functional and responsive web applications, whether it's for business systems or personal projects. I'm always exploring new tools and best practices to improve my coding skills and create clean, modern websites.</p>
+							<a href="project_web.html" class="special">Click me for More Projects!</a>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Two -->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner" style="display: flex; flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+						<!-- Text on the left -->
+						<div class="content" style="flex: 1; min-width: 300px;">
+							<h2 class="major">Video Editing</h2>
+							<p>Video editing is one of my creative strengths. I use tools like CapCut to produce engaging content, from short reels to storytelling videos. I enjoy editing clips, adding transitions, syncing music, and creating videos that not only look good but also connect with the audience. Whether it's for school projects or online content, I always aim for a clean and polished final product.</p>
+							<a href="project_ved.html" class="special">Click me for More Projec</a>
+						</div>
+
+						<!-- Video on the right -->
+						<div class="video-container" style="border-radius: 8px; display: flex; justify-content: center; flex: 1; min-width: 300px;">
+							<video width="100%" height="auto" loop muted autoplay style="object-fit: cover; border-radius: 10px; max-width: 550px;">
+								<source src="videos/Video editing.mp4" type="video/mp4">
+								Video Editing
+							</video>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner" style="display: flex; flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+						<!-- Video on the left -->
+						<div class="video-container" style="border-radius: 8px; display: flex; justify-content: center; flex: 1; min-width: 300px;">
+							<video width="100%" height="auto" loop muted autoplay style="object-fit: cover; border-radius: 10px; max-width: 550px;">
+								<source src="videos/camera.mp4" type="video/mp4">
+								3D Modeling
+							</video>
+						</div>
+
+						<!-- Content on the right -->
+						<div class="content" style="flex: 1; min-width: 300px;">
+							<h2 class="major">3D Modeling (Blender)</h2>
+							<p>I use Blender to create 3D models, animations, and visual scenes. I enjoy working with shapes, textures, lighting, and camera movement to bring concepts to life. Whether it's for games, concept art, or creative exploration, 3D design allows me to turn imagination into realistic visuals.</p>
+							<a href="project_3d.html" class="special">Click me for More Projec</a>
+						</div>
+
+					</div>
+				</section>
+
+
+				<!-- Excel, Pivot table-->
+				<section id="two" class="wrapper alt spotlight style2">
+					<div class="inner" style="display: flex; flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+						<!-- Text on the left -->
+						<div class="content" style="flex: 1; min-width: 300px;">
+							<h2 class="major">Excel, Pivot table</h2>
+							<p>I use Microsoft Excel to manage and analyze data efficiently. One of the tools I often use is the Pivot Table, which allows me to quickly summarize large datasets, group information, and generate meaningful insights. Whether it's for organizing school data or creating business reports, Excel helps me work more accurately and productively.</p>
+
+							<!--<a href="project_ved.html" class="special">Click me for More Projec</a>-->
+						</div>
+
+						<!-- Video on the right -->
+						<div class="video-container" style="border-radius: 8px; display: flex; justify-content: center; flex: 1; min-width: 300px;">
+							<video width="100%" height="auto" loop muted autoplay style="object-fit: cover; border-radius: 10px; max-width: 550px;">
+								<source src="videos/excel.mp4" type="video/mp4">
+								Video Editing
+							</video>
+						</div>
+
+					</div>
+				</section>
+
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Certificates</h2>
+									<p>Each certificate represents a step in my journey as a learner and developer. Whether it's completing a course, attending a workshop, or passing an online training program, these milestones highlight my passion for growing and staying current in the ever-evolving tech landscape.</p>
+									<section class="features">
+
+										<!-- Modal -->
+										<div id="certificateModal" class="modal">
+											<span class="close-modal">&times;</span>
+											<img class="modal-content" id="modalImage">
+										</div>
+
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/Business Analytics and Frameworks.png"><img src="Certificates/Business Analytics and Frameworks.png" alt="" /></a>
+											<h3 class="major">Business Analytics Concepts and Frameworks</h3>
+											<p>...</p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/MOS.png"><img src="Certificates/MOS.png" alt="" /></a>
+											<h3 class="major">Microsoft Office Specialist</h3>
+											<p>...</p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/GraphicDesign_Algordo Certificate.png"><img src="Certificates/GraphicDesign_Algordo Certificate.png" alt="" /></a>
+											<h3 class="major">Principles of Graphic Design</h3>
+											<p>...<p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/Graphic Design.png"><img src="Certificates/Graphic Design.png" alt="" /></a>
+											<h3 class="major">Graphic Design/Photoshop</h3>
+											<p>...</p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/Plagarism_Algordo Certificate.png"><img src="Certificates/Plagarism_Algordo Certificate.png" alt="" /></a>
+											<h3 class="major">Plagarism And Copyright Infringement</h3>
+											<p>...</p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/CyberSecuruty_Algordo Certificate.png"><img src="Certificates/CyberSecuruty_Algordo Certificate.png" alt="" /></a>
+											<h3 class="major">Cyber Security Awareness and Digital Privacy</h3>
+											<p>...</p>
+										</article>
+										<article>
+											<a href="#" class="image certificate-image" data-img="Certificates/Algordo, Carlo_SPSS.jpg"><img src="Certificates/Algordo, Carlo_SPSS.jpg" alt="" /></a>
+											<h3 class="major">SPSS</h3>
+											<p>...</p>
+										</article>
+
+										
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">View Again</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Send me an email or contact me on my phone number</p>
+							
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Philippines<br />
+									<br />
+									Caloocan City, Philippines
+								</li>
+								<li class="icon solid fa-phone">(094) 5973-8579</li>
+								<li class="icon solid fa-envelope"><a href="https://mail.google.com/mail/u/0/#sent?compose=new">Karlo.algordo@gmail.com</a></li>
+								<!--<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>-->
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				const banner = document.getElementById('banner');
+				const images = [
+					'images/pic09.png',
+					'images/pic10.png',
+					'images/pic11.png',
+					'images/pic12.png',
+					'images/pic13.png',
+					'images/pic14.png'
+					// Add more image paths as needed
+				];
+				let current = 0;
+
+				function changeBg() {
+					banner.classList.add('fade');
+					setTimeout(() => {
+						banner.style.background = `url('${images[current]}') center center/cover no-repeat`;
+						banner.classList.remove('fade');
+						current = (current + 1) % images.length;
+					}, 400); // Half of the transition duration
+				}
+
+				// Initial background
+				banner.style.background = `url('${images[0]}') center center/cover no-repeat`;
+				setInterval(changeBg, 4000); // Change every 4 seconds
+
+				// Modal functionality
+				const modal = document.getElementById('certificateModal');
+				const modalImg = document.getElementById('modalImage');
+				const closeModal = document.querySelector('.close-modal');
+				const certificateImages = document.querySelectorAll('.certificate-image');
+
+				certificateImages.forEach(img => {
+					img.addEventListener('click', function(e) {
+						e.preventDefault();
+						modal.style.display = "block";
+						modalImg.src = this.getAttribute('data-img');
+					});
+				});
+
+				closeModal.addEventListener('click', function() {
+					modal.style.display = "none";
+				});
+
+				window.addEventListener('click', function(e) {
+					if (e.target === modal) {
+						modal.style.display = "none";
+					}
+				});
+
+				// Close modal with Escape key
+				document.addEventListener('keydown', function(e) {
+					if (e.key === "Escape" && modal.style.display === "block") {
+						modal.style.display = "none";
+					}
+				});
+			</script>
+
+	</body>
+</html>
