@@ -8,10 +8,181 @@
 	<head>
 		<title>Carlo Website Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5" />
 		<link rel="icon" type="image/jpeg" href="images/me.jpeg">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Mobile-specific improvements for project_web.html */
+			@media screen and (max-width: 768px) {
+				/* Header improvements */
+				#wrapper > header {
+					padding: 2em 1em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.8em !important;
+					margin-bottom: 0.5em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 1em !important;
+					line-height: 1.6 !important;
+				}
+				
+				/* Features improvements */
+				.features {
+					gap: 1.5em !important;
+				}
+				
+				.features article {
+					flex: 1 1 100% !important;
+					max-width: 100% !important;
+					min-width: auto !important;
+					margin-bottom: 2em !important;
+				}
+				
+				.features article .image {
+					margin-bottom: 1em !important;
+				}
+				
+				.features article .image video {
+					border-radius: 8px !important;
+					max-width: 100% !important;
+				}
+				
+				.features article h3 {
+					font-size: 1.4em !important;
+					margin-bottom: 0.5em !important;
+				}
+				
+				.features article p {
+					font-size: 0.9em !important;
+					line-height: 1.5 !important;
+					margin-bottom: 1em !important;
+				}
+				
+				.features article a.special {
+					font-size: 0.9em !important;
+					padding: 0.8em 1.2em !important;
+					display: inline-block !important;
+					margin-top: 1em !important;
+				}
+				
+				/* Content wrapper improvements */
+				.wrapper .inner {
+					padding: 1.5em 1em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.3em !important;
+					margin-bottom: 1em !important;
+				}
+			}
+			
+			@media screen and (max-width: 480px) {
+				/* Header for small screens */
+				#wrapper > header {
+					padding: 1.5em 0.8em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.6em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 0.9em !important;
+				}
+				
+				/* Features for small screens */
+				.features {
+					gap: 1em !important;
+				}
+				
+				.features article {
+					margin-bottom: 1.5em !important;
+				}
+				
+				.features article h3 {
+					font-size: 1.2em !important;
+				}
+				
+				.features article p {
+					font-size: 0.85em !important;
+				}
+				
+				.features article a.special {
+					font-size: 0.85em !important;
+					padding: 0.7em 1em !important;
+				}
+				
+				/* Content wrapper for small screens */
+				.wrapper .inner {
+					padding: 1em 0.8em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.2em !important;
+				}
+			}
+			
+			@media screen and (max-width: 360px) {
+				/* Header for extra small screens */
+				#wrapper > header {
+					padding: 1em 0.5em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.5em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 0.85em !important;
+				}
+				
+				/* Features for extra small screens */
+				.features {
+					gap: 0.8em !important;
+				}
+				
+				.features article {
+					margin-bottom: 1em !important;
+				}
+				
+				.features article h3 {
+					font-size: 1.1em !important;
+				}
+				
+				.features article p {
+					font-size: 0.8em !important;
+				}
+				
+				.features article a.special {
+					font-size: 0.8em !important;
+					padding: 0.6em 0.8em !important;
+				}
+				
+				/* Content wrapper for extra small screens */
+				.wrapper .inner {
+					padding: 0.8em 0.5em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.1em !important;
+				}
+			}
+			
+			/* Touch-friendly improvements */
+			@media (hover: none) and (pointer: coarse) {
+				.features article a.special {
+					min-height: 44px !important;
+					min-width: 44px !important;
+					display: flex !important;
+					align-items: center !important;
+					justify-content: center !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 

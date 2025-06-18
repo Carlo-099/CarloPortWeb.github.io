@@ -98,15 +98,10 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto,
- cover;
-		background-attachment: fixed,
- fixed;
-		background-position: center,
- center;
+	body, .wrapper {
+		background: linear-gradient(135deg, #181A20 60%, #232946 100%) !important;
+		background-image: none !important;
+		background-color: transparent !important;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -4154,3 +4149,464 @@ input, select, textarea {
 		}
 
 	}
+
+/* ===== MOBILE RESPONSIVENESS IMPROVEMENTS ===== */
+
+/* Mobile-first responsive improvements */
+@media screen and (max-width: 768px) {
+    /* General text size adjustments for mobile */
+    body, input, select, textarea {
+        font-size: 14px !important;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+    }
+    
+    h2 {
+        font-size: 1.8em !important;
+    }
+    
+    h3 {
+        font-size: 1.4em !important;
+    }
+    
+    /* Banner improvements for mobile */
+    #banner .inner {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 2em 1em;
+    }
+    
+    #banner .inner > div {
+        flex: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    #banner .inner > div:first-child {
+        margin-bottom: 2em !important;
+    }
+    
+    #banner h2 {
+        font-size: 2em !important;
+        margin-bottom: 0.5em;
+    }
+    
+    #banner p {
+        font-size: 1em !important;
+        margin-bottom: 1.5em;
+    }
+    
+    /* Logo container improvements */
+    .logo {
+        padding: 0.8em !important;
+        margin-top: 1em !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.5em !important;
+    }
+    
+    .custom-icon {
+        width: 28px !important;
+        height: 28px !important;
+        margin: 0.2em !important;
+    }
+    
+    /* Profile image improvements */
+    #banner .inner > div:last-child {
+        margin-left: 0 !important;
+    }
+    
+    #banner .inner > div:last-child > div {
+        padding: 0.8em !important;
+    }
+    
+    #banner .inner > div:last-child img {
+        max-width: 200px !important;
+    }
+    
+    /* Section improvements */
+    .wrapper.spotlight .inner {
+        flex-direction: column !important;
+        gap: 2em !important;
+    }
+    
+    .wrapper.spotlight .inner > div {
+        flex: none !important;
+        width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    .wrapper.spotlight .content {
+        order: 2;
+    }
+    
+    .wrapper.spotlight .video-container {
+        order: 1;
+    }
+    
+    /* Video improvements */
+    .video-container video {
+        max-width: 100% !important;
+        border-radius: 10px !important;
+    }
+    
+    /* Features section improvements */
+    .features {
+        gap: 1.5em !important;
+    }
+    
+    .features article {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        min-width: auto !important;
+        margin-bottom: 2em !important;
+    }
+    
+    .features article img {
+        border-radius: 8px !important;
+    }
+    
+    /* Certificate modal improvements */
+    .modal-content {
+        max-width: 95% !important;
+        max-height: 85vh !important;
+    }
+    
+    .close-modal {
+        right: 15px !important;
+        top: 10px !important;
+        font-size: 30px !important;
+    }
+    
+    /* Footer improvements */
+    #footer .inner {
+        padding: 2em 1em !important;
+    }
+    
+    #footer .inner .contact li {
+        margin-bottom: 1em !important;
+        font-size: 0.9em !important;
+    }
+    
+    /* Header improvements */
+    #header h1 {
+        font-size: 1.2em !important;
+    }
+    
+    #header nav a[href="#menu"] {
+        font-size: 0.9em !important;
+        padding: 0.5em 0.8em !important;
+    }
+    
+    /* Menu improvements */
+    #menu .inner {
+        padding: 2em 1em !important;
+    }
+    
+    #menu .links li {
+        margin-bottom: 1em !important;
+    }
+    
+    #menu .links li a {
+        font-size: 1.1em !important;
+        padding: 0.8em 0 !important;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    body, input, select, textarea {
+        font-size: 13px !important;
+    }
+    
+    h2 {
+        font-size: 1.6em !important;
+    }
+    
+    h3 {
+        font-size: 1.3em !important;
+    }
+    
+    /* Banner further improvements */
+    #banner .inner {
+        padding: 1.5em 0.8em !important;
+    }
+    
+    #banner h2 {
+        font-size: 1.8em !important;
+    }
+    
+    #banner p {
+        font-size: 0.9em !important;
+    }
+    
+    /* Logo container for small screens */
+    .logo {
+        padding: 0.6em !important;
+        gap: 0.3em !important;
+    }
+    
+    .custom-icon {
+        width: 24px !important;
+        height: 24px !important;
+        margin: 0.1em !important;
+    }
+    
+    /* Profile image for small screens */
+    #banner .inner > div:last-child img {
+        max-width: 150px !important;
+    }
+    
+    /* Section spacing for small screens */
+    .wrapper.spotlight .inner {
+        gap: 1.5em !important;
+        padding: 1.5em 0.8em !important;
+    }
+    
+    .wrapper.spotlight .content {
+        padding: 0 0.5em !important;
+    }
+    
+    /* Features for small screens */
+    .features {
+        gap: 1em !important;
+    }
+    
+    .features article {
+        margin-bottom: 1.5em !important;
+    }
+    
+    .features article h3 {
+        font-size: 1.2em !important;
+        margin-bottom: 0.5em !important;
+    }
+    
+    .features article p {
+        font-size: 0.9em !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Footer for small screens */
+    #footer .inner {
+        padding: 1.5em 0.8em !important;
+    }
+    
+    #footer .inner h2 {
+        font-size: 1.4em !important;
+    }
+    
+    #footer .inner .contact li {
+        font-size: 0.85em !important;
+        margin-bottom: 0.8em !important;
+    }
+    
+    /* Header for small screens */
+    #header h1 {
+        font-size: 1.1em !important;
+    }
+    
+    #header nav a[href="#menu"] {
+        font-size: 0.8em !important;
+        padding: 0.4em 0.6em !important;
+    }
+    
+    /* Menu for small screens */
+    #menu .inner {
+        padding: 1.5em 0.8em !important;
+    }
+    
+    #menu .links li a {
+        font-size: 1em !important;
+        padding: 0.6em 0 !important;
+    }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 360px) {
+    body, input, select, textarea {
+        font-size: 12px !important;
+    }
+    
+    h2 {
+        font-size: 1.5em !important;
+    }
+    
+    h3 {
+        font-size: 1.2em !important;
+    }
+    
+    /* Banner for extra small screens */
+    #banner .inner {
+        padding: 1em 0.5em !important;
+    }
+    
+    #banner h2 {
+        font-size: 1.6em !important;
+    }
+    
+    #banner p {
+        font-size: 0.85em !important;
+    }
+    
+    /* Logo container for extra small screens */
+    .logo {
+        padding: 0.5em !important;
+        gap: 0.2em !important;
+    }
+    
+    .custom-icon {
+        width: 20px !important;
+        height: 20px !important;
+        margin: 0.1em !important;
+    }
+    
+    /* Profile image for extra small screens */
+    #banner .inner > div:last-child img {
+        max-width: 120px !important;
+    }
+    
+    /* Section spacing for extra small screens */
+    .wrapper.spotlight .inner {
+        gap: 1em !important;
+        padding: 1em 0.5em !important;
+    }
+    
+    .wrapper.spotlight .content {
+        padding: 0 0.3em !important;
+    }
+    
+    /* Features for extra small screens */
+    .features {
+        gap: 0.8em !important;
+    }
+    
+    .features article {
+        margin-bottom: 1em !important;
+    }
+    
+    .features article h3 {
+        font-size: 1.1em !important;
+    }
+    
+    .features article p {
+        font-size: 0.85em !important;
+    }
+    
+    /* Footer for extra small screens */
+    #footer .inner {
+        padding: 1em 0.5em !important;
+    }
+    
+    #footer .inner h2 {
+        font-size: 1.3em !important;
+    }
+    
+    #footer .inner .contact li {
+        font-size: 0.8em !important;
+        margin-bottom: 0.6em !important;
+    }
+    
+    /* Header for extra small screens */
+    #header h1 {
+        font-size: 1em !important;
+    }
+    
+    #header nav a[href="#menu"] {
+        font-size: 0.75em !important;
+        padding: 0.3em 0.5em !important;
+    }
+    
+    /* Menu for extra small screens */
+    #menu .inner {
+        padding: 1em 0.5em !important;
+    }
+    
+    #menu .links li a {
+        font-size: 0.9em !important;
+        padding: 0.5em 0 !important;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    a, button, input[type="submit"] {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        padding: 0.8em 1.2em !important;
+    }
+    
+    /* Better spacing for touch */
+    .features article {
+        padding: 1em !important;
+    }
+    
+    .features article a {
+        display: inline-block !important;
+        padding: 0.8em 1.2em !important;
+        margin-top: 1em !important;
+    }
+    
+    /* Improved modal close button */
+    .close-modal {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Landscape orientation improvements */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    #banner .inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 2em !important;
+    }
+    
+    #banner .inner > div:first-child {
+        margin-bottom: 0 !important;
+        flex: 1 !important;
+    }
+    
+    #banner .inner > div:last-child {
+        flex: 1 !important;
+    }
+    
+    #banner .inner > div:last-child img {
+        max-width: 120px !important;
+    }
+    
+    .wrapper.spotlight .inner {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    .wrapper.spotlight .content {
+        order: 2 !important;
+    }
+    
+    .wrapper.spotlight .video-container {
+        order: 1 !important;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .custom-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+.wrapper:before, .wrapper:after, .wrapper.style2:before, .wrapper.style2:after, .wrapper.style3:before, .wrapper.style3:after, .wrapper.style4:before, .wrapper.style4:after, .wrapper.style5:before, .wrapper.style5:after, .wrapper.style6:before, .wrapper.style6:after, .wrapper.spotlight:before, .wrapper.spotlight:after, .wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after, .wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after, .wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after, .wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after, .wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
+  background: #000 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  content: '' !important;
+}

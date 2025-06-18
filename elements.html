@@ -8,9 +8,219 @@
 	<head>
 		<title>Elements - Solid State by HTML5 UP</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Mobile-specific improvements for elements.html */
+			@media screen and (max-width: 768px) {
+				/* Header improvements */
+				#wrapper > header {
+					padding: 2em 1em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.8em !important;
+					margin-bottom: 0.5em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 1em !important;
+					line-height: 1.6 !important;
+				}
+				
+				/* Content wrapper improvements */
+				.wrapper .inner {
+					padding: 1.5em 1em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.3em !important;
+					margin-bottom: 1em !important;
+				}
+				
+				.wrapper .inner h4 {
+					font-size: 1.1em !important;
+					margin-bottom: 0.8em !important;
+				}
+				
+				.wrapper .inner p {
+					font-size: 0.9em !important;
+					line-height: 1.5 !important;
+					margin-bottom: 1em !important;
+				}
+				
+				/* Row improvements */
+				.row {
+					flex-direction: column !important;
+					gap: 1.5em !important;
+				}
+				
+				.row > * {
+					width: 100% !important;
+					margin: 0 !important;
+				}
+				
+				/* Table improvements */
+				.table-wrapper {
+					overflow-x: auto !important;
+					margin-bottom: 1.5em !important;
+				}
+				
+				.table-wrapper table {
+					min-width: 600px !important;
+					font-size: 0.9em !important;
+				}
+				
+				/* Button improvements */
+				.actions {
+					flex-direction: column !important;
+					gap: 0.8em !important;
+				}
+				
+				.actions li {
+					width: 100% !important;
+				}
+				
+				.actions .button {
+					width: 100% !important;
+					text-align: center !important;
+					padding: 0.8em 1.2em !important;
+				}
+				
+				/* Pagination improvements */
+				.pagination {
+					flex-wrap: wrap !important;
+					gap: 0.5em !important;
+					justify-content: center !important;
+				}
+				
+				.pagination li {
+					margin: 0 !important;
+				}
+				
+				.pagination .page,
+				.pagination .button {
+					padding: 0.6em 0.8em !important;
+					font-size: 0.9em !important;
+				}
+			}
+			
+			@media screen and (max-width: 480px) {
+				/* Header for small screens */
+				#wrapper > header {
+					padding: 1.5em 0.8em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.6em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 0.9em !important;
+				}
+				
+				/* Content wrapper for small screens */
+				.wrapper .inner {
+					padding: 1em 0.8em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.2em !important;
+				}
+				
+				.wrapper .inner h4 {
+					font-size: 1em !important;
+				}
+				
+				.wrapper .inner p {
+					font-size: 0.85em !important;
+				}
+				
+				/* Table for small screens */
+				.table-wrapper table {
+					min-width: 500px !important;
+					font-size: 0.85em !important;
+				}
+				
+				/* Button for small screens */
+				.actions .button {
+					padding: 0.7em 1em !important;
+					font-size: 0.85em !important;
+				}
+				
+				/* Pagination for small screens */
+				.pagination .page,
+				.pagination .button {
+					padding: 0.5em 0.6em !important;
+					font-size: 0.8em !important;
+				}
+			}
+			
+			@media screen and (max-width: 360px) {
+				/* Header for extra small screens */
+				#wrapper > header {
+					padding: 1em 0.5em !important;
+				}
+				
+				#wrapper > header h2 {
+					font-size: 1.5em !important;
+				}
+				
+				#wrapper > header p {
+					font-size: 0.85em !important;
+				}
+				
+				/* Content wrapper for extra small screens */
+				.wrapper .inner {
+					padding: 0.8em 0.5em !important;
+				}
+				
+				.wrapper .inner h3 {
+					font-size: 1.1em !important;
+				}
+				
+				.wrapper .inner h4 {
+					font-size: 0.95em !important;
+				}
+				
+				.wrapper .inner p {
+					font-size: 0.8em !important;
+				}
+				
+				/* Table for extra small screens */
+				.table-wrapper table {
+					min-width: 400px !important;
+					font-size: 0.8em !important;
+				}
+				
+				/* Button for extra small screens */
+				.actions .button {
+					padding: 0.6em 0.8em !important;
+					font-size: 0.8em !important;
+				}
+				
+				/* Pagination for extra small screens */
+				.pagination .page,
+				.pagination .button {
+					padding: 0.4em 0.5em !important;
+					font-size: 0.75em !important;
+				}
+			}
+			
+			/* Touch-friendly improvements */
+			@media (hover: none) and (pointer: coarse) {
+				.actions .button,
+				.pagination .page,
+				.pagination .button {
+					min-height: 44px !important;
+					min-width: 44px !important;
+					display: flex !important;
+					align-items: center !important;
+					justify-content: center !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -284,45 +494,47 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<div class="row gtr-uniform">
 												<div class="col-6 col-12-xsmall">
 													<label for="demo-name">Name</label>
-													<input type="text" name="demo-name" id="demo-name" value="" />
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
 												</div>
 												<div class="col-6 col-12-xsmall">
 													<label for="demo-email">Email</label>
-													<input type="email" name="demo-email" id="demo-email" value="" />
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
 												</div>
 												<div class="col-12">
 													<label for="demo-category">Category</label>
-													<select name="demo-category" id="demo-category">
-														<option value="">-</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
+													<div class="select-wrapper">
+														<select name="demo-category" id="demo-category">
+															<option value="">-</option>
+															<option value="1">Manufacturing</option>
+															<option value="1">Shipping</option>
+															<option value="1">Administration</option>
+															<option value="1">Human Resources</option>
+														</select>
+													</div>
 												</div>
-												<div class="col-4 col-12-small">
+												<div class="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
 													<label for="demo-priority-low">Low Priority</label>
 												</div>
-												<div class="col-4 col-12-small">
+												<div class="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-normal" name="demo-priority">
 													<label for="demo-priority-normal">Normal Priority</label>
 												</div>
-												<div class="col-4 col-12-small">
+												<div class="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-high" name="demo-priority">
 													<label for="demo-priority-high">High Priority</label>
 												</div>
-												<div class="col-6 col-12-small">
+												<div class="col-6 col-12-medium">
 													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy</label>
+													<label for="demo-copy">Email me a copy of this message</label>
 												</div>
-												<div class="col-6 col-12-small">
+												<div class="col-6 col-12-medium">
 													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">Not a robot</label>
+													<label for="demo-human">I am a human and not a robot</label>
 												</div>
 												<div class="col-12">
 													<label for="demo-message">Message</label>
-													<textarea name="demo-message" id="demo-message" rows="6"></textarea>
+													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
 												</div>
 												<div class="col-12">
 													<ul class="actions">
@@ -387,7 +599,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</form>
 							<ul class="contact">
 								<li class="icon solid fa-home">
-									Untitled Inc<br />
 									1234 Somewhere Road Suite #2894<br />
 									Nashville, TN 00000-0000
 								</li>
